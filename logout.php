@@ -1,6 +1,6 @@
 <?php
-    require("bdd.php");
-    include("session.php");
+    require("class/databases/bdd.php");
+    include("class/databases/session.php");
     $session = new Session($db);
     if(isset($_GET["type"]))
     {

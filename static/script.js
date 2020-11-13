@@ -26,7 +26,7 @@ errorHanlder.prototype.toString = function () {
 async function ajaxOK() {
     let retour = false;
     let error = "";
-    const url = "ajax.php";
+    const url = "class/tools/ajax.php";
     const isok = "! KO";
     const exceptedOk = "OK !"
     await $.ajax({
@@ -53,7 +53,7 @@ async function ajaxOK() {
 }
 class readJsonFile {
     constructor(htmlModif) {
-        this.url = "ajax.php"
+        this.url = "class/tools/ajax.php"
         this.htmlModif = htmlModif;
         this.json = [];
     }

@@ -1,5 +1,5 @@
 <?php
-require('tool.php');
+require('class/tools/tool.php');
 Tool::redirectIfID("complete.php");
 $title = "Enregistrer";
 $content = "";
@@ -34,5 +34,5 @@ ob_start();
 </form>
 <?php
 $content .= ob_get_clean();
-require('template.php');
+require('class/templates/template.php');
 ?>

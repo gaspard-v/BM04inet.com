@@ -1,7 +1,7 @@
 <?php
-require('tool.php');
+require('class/tools/tool.php');
 Tool::redirectIfID("complete.php");
-require("bdd.php");
+require("class/databases/bdd.php");
 if (empty($_POST["identifiant"]) || empty($_POST["password"])) {
     header('Location: register.php?error=empty');
 }
@@ -28,5 +28,5 @@ catch (Exception $exception)
 $content = "";
 $content .= "<h1>Enregistrement complété !</h1>";
 $content .= "<p>vuillez vous connecter avec votre nom d'utilisateur \"" . $_POST["identifiant"] . "\"";
-require('template.php');
+require('class/templates/template.php');
 ?>

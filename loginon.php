@@ -1,6 +1,6 @@
 <?php
-require("bdd.php");
-require("session.php");
+require("class/databases/bdd.php");
+require("class/databases/session.php");
 if (empty($_POST["identifiant"]) || empty($_POST["password"])) {
     header('Location: login.php?error=empty');
 } else {

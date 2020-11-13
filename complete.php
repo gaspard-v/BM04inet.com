@@ -1,6 +1,6 @@
 <?php
-require("bdd.php");
-require("session.php");
+require("class/databases/bdd.php");
+require("class/databases/session.php");
 $content = "";
 $error = false;
 try {
@@ -49,5 +49,5 @@ new Vue({
 <?php
 if(!$error) $inlineScript = ob_get_clean();
 else ob_end_clean();
-require('template.php');
+require('class/templates/template.php');
 ?>

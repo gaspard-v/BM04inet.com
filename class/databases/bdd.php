@@ -1,11 +1,8 @@
 <?php
 require('mariadb.php');
-$db = new mariadb("localhost", "web_test", "S80dd9xRBJBuc1Uy", "web_test");
-$db_ok = false;
+$db = new mariadb("localhost", "BM04", "PuMm6A8QLYRCtl34", "bm04");
 try {
     $db->BDDconnecte();
-    $db_ok = true;
 } catch (Exception $exception) {
     $content = "<p>Une erreur est survenu</p>";
-    $db_ok = false;
 }

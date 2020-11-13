@@ -1,8 +1,10 @@
 <?php
-require('tool.php');
+define(ROOT_PATH, dirname(__FILE__) );
+define(CLASS_PATH, ROOT_PATH . "/class");
+
+require('class/tools/tool.php');
 Tool::redirectIfID("complete.php");
 $title = "eusso";
-require('head.php');
 ob_start();
 ?>
 <ul>
@@ -11,5 +13,5 @@ ob_start();
 </ul>
 <?php
 $content = ob_get_clean();
-require('template.php');
+require('class/templates/template.php');
 ?>

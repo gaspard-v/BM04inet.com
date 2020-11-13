@@ -7,8 +7,8 @@
     if(isset($_GET["jsonfile"]))
     {
         $retour = "";
-        include("session.php");
-        require("bdd.php");
+        require(dirname( dirname(__FILE__) ) . "/databases/session.php");
+        require(dirname( dirname(__FILE__) ) . "/databases/bdd.php");
         $session = new Session($db);
         if($session->loginUserCookie())
         {

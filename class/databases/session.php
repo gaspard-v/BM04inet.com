@@ -9,7 +9,7 @@ class Session
     public function setCookie($user, $password, $skip = false, $name = "id", $value = false, $expires = false, $path = null, $domain = null, $secure = false, $httponly = true)
     {
         if ($path == null)  {
-            require("path.php");
+            require(dirname( dirname(__FILE__) ) . "/path.php");
             $path = $site;
         }
         $is_ok = true;
@@ -63,7 +63,7 @@ class Session
     static public function deleteCookie($name, $value = null, $path = null, $domain = null, $secure = false, $httponly = true)
     {
         if ($path == null)  {
-            require("path.php");
+            require(dirname( dirname(__FILE__) ) . "/path.php");
             $path = $site;
         }
         setcookie($name, $value, time() - 3600, $path, $domain, $secure, $httponly);
